@@ -21,9 +21,12 @@ class UsersController < ApplicationController
   def update
 
     if @user.update(user_params)
-        redirect_to new_user_path
+      flash.notice = "User '#{@user.username}' Updated!"
+      redirect_to edit_user_path
     else
-        render 'edit'
+      redirect_to edit_user_path
+      #flash.notice = "Some errors found try again!!!"
+      flash.notice = @user.errors.full_messages
     end
   end
 
