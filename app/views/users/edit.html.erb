@@ -1,0 +1,19 @@
+
+<%= form_for @user, url:  "/users/#{@user.id}", method: :patch do |f| %>
+  <%= label_tag(:username) %>
+  <br>
+  <%= f.text_field :username, placeholder: 'Your name' %>
+  <br>
+  <br>
+  <%= label_tag(:email) %>
+  <br>
+  <%= f.text_field :email, placeholder: 'Your email'%>
+  <br>
+  <br>
+  <%= label_tag(:password) %>
+  <br>
+  <%= f.password_field :password%>
+  <br>
+  <br>
+  <%= f.submit%>
+<% end %>
