@@ -1,20 +1,20 @@
- <h1>Welcome this is a test</h1>
+ <h1>Sign In</h1>
 
-<%= form_tag('/users') do %>
+<%= form_for @user, url:  '/users' do |f| %>
   <%= label_tag(:username) %>
   <br>
-  <%= text_field_tag(:username, nil, placeholder: 'Enter your user name') %>
+  <%= f.text_field :username, placeholder: 'Your name' %>
   <br>
   <br>
   <%= label_tag(:email) %>
   <br>
-  <%= email_field_tag(:email, nil, placeholder: 'Enter your email here')%>
+  <%= f.text_field :email, placeholder: 'Your email'%>
   <br>
   <br>
   <%= label_tag(:password) %>
   <br>
-  <%= password_field_tag(:password)%>
+  <%= f.password_field :password%>
   <br>
   <br>
-  <%= submit_tag("Add user")%>
+  <%= f.submit%>
 <% end %>
