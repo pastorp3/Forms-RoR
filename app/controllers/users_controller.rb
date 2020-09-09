@@ -5,7 +5,6 @@ class UsersController < ApplicationController
   end
 
   def create
-    # @user = User.new(username: params[:username], email: params[:email], password: params[:password])
     @user = User.new(user_params)
     if @user.save
       redirect_to new_user_path
@@ -22,7 +21,6 @@ class UsersController < ApplicationController
       redirect_to edit_user_path
     else
       redirect_to edit_user_path
-      # flash.notice = "Some errors found try again!!!"
       flash.notice = @user.errors.full_messages
     end
   end
