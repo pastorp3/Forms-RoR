@@ -34,7 +34,7 @@
 <% end %>
 -->
 
-<%= form_for @user, url:  '/users' do |f| %>
+<%= form_for @user do |f| %>
   <%= label_tag(:username) %>
   <br>
   <%= f.text_field :username, placeholder: 'Your name' %>
