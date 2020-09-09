@@ -20,8 +20,8 @@ class UsersController < ApplicationController
       flash.notice = "User '#{@user.username}' Updated!"
       redirect_to edit_user_path
     else
-      redirect_to edit_user_path
       flash.notice = @user.errors.full_messages
+      render 'edit'
     end
   end
 
