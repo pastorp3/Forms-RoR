@@ -34,21 +34,4 @@
 <% end %>
 -->
 
-<%= form_for @user do |f| %>
-  <%= f.label :username  %>
-  <br>
-  <%= f.text_field :username, placeholder: 'Your name' %>
-  <br>
-  <br>
-  <%= f.label :email %>
-  <br>
-  <%= f.email_field :email, placeholder: 'Your email'%>
-  <br>
-  <br>
-  <%= f.label :password %>
-  <br>
-  <%= f.password_field :password%>
-  <br>
-  <br>
-  <%= f.submit%>
-<% end %>
+<%= render partial: 'form' %>
